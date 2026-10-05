@@ -61,16 +61,16 @@ public class ActivationPatternTest {
 
     @Test
     public void testDataForwarding() {
-        checkStateString("(0,0)(0,0)(-1,1)", false);
+        checkStateString("(0,0)(0,0)(-1,2)", false);
         activationPattern.select();
-        checkStateString("(0,0)(0,0)(-1,1)", true);
+        checkStateString("(0,0)(0,0)(-1,2)", true);
         assertEquals(3, grid.activations.size());
         assertEquals(Integer.valueOf(0), grid.activations.get(0).getKey());
         assertEquals(Integer.valueOf(0), grid.activations.get(0).getValue());
         assertEquals(Integer.valueOf(0), grid.activations.get(1).getKey());
         assertEquals(Integer.valueOf(0), grid.activations.get(1).getValue());
         assertEquals(Integer.valueOf(-1), grid.activations.get(2).getKey());
-        assertEquals(Integer.valueOf(1), grid.activations.get(2).getValue());
+        assertEquals(Integer.valueOf(2), grid.activations.get(2).getValue());
     }
         
 
